@@ -1,0 +1,77 @@
+.gameboy{
+position: relative;
+margin-top: 5%;
+opacity: 90%;
+}
+.gameboy>img{
+border-radius: 15px;
+}
+
+.screen{
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 45%;
+    margin-bottom: 100%;     
+}
+@keyframes blink {
+   to{
+    color: transparent;
+   }
+}
+.screen>p{
+    color:white;
+    font-family: "Silkscreen";  
+    font-size: 30px;
+    margin-top: 0;
+    animation: blink 1.5s infinite;
+}
+
+.screen>img{
+    max-width: 150px;
+    opacity: 85%;
+}
+
+.button{
+    width: 39px;
+    height: 39px;
+    background-color: aqua;
+    position: absolute;
+    margin-top: 24%;
+    margin-left: 17%; 
+    margin-bottom: 100%;
+    border-radius: 30px;
+    border: 0;
+    background-color: transparent;
+}
+.button:hover{
+    background-color: rgb(123, 33, 33);
+    opacity: 40%;
+}
+.myclass-exit{
+opacity: 1;
+}
+
+.myclass-exit-active{
+opacity: 0;
+transition: opacity 5000ms;
+
+}
+
+.myclass-exit-done{
+opacity: 0;
+}
+
+.myclass-appear{
+    opacity: 0;
+    }
+    
+.myclass-appear-active{
+    opacity: 1;
+    transition: opacity 5000ms;
+    
+    }
+    
+.myclass-appear-done{
+    opacity: 1;
+    }
+

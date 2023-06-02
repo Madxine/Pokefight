@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face{
+  font-family: "Silkscreen";
+  src:local("Silkscreen"), url("../fonts/Silkscreen/slkscr.ttf")format("truetype");
+  font-weight: 400;
+}

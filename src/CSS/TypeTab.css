@@ -1,0 +1,57 @@
+.Tabs{
+    /* margin-top: 10%; */
+    background-color: black;
+    color:aliceblue;  
+    position: relative;
+    /* max-width: 320px;*/
+    /* max-height: 600px;  */
+    /* font-family: "Silkscreen"; */
+    /* margin-left: 40%; */
+}
+
+.bg-frame{
+   /* margin-top: 10%; */
+    /* background-image:url('../assets/BOX.png') ; */
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.TabPanel{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+    max-height: 600px;
+}
+
+input::placeholder {
+    border: 1px;
+    border-color: black;
+    font-family: "Silkscreen";
+}
+.searchButton{
+    font-family: "Silkscreen";
+}
+.pokemoncontainer{
+    width: 200px;
+    height: 200px;
+}
+.pokeball{
+    width: 8%;
+}
+
+.exitButton{
+    font-family: "Silkscreen";
+    color: aliceblue;
+    background-color: black;
+    border: solid 1px white;
+}
+
