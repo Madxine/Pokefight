@@ -1,37 +1,47 @@
+body{overflow: hidden;}
 .fighting{
-    margin-top: 5%;
+    margin-top: 3%;
     margin-left: 30%;
     position: absolute;
     font-family: "Silkscreen"; 
     color: aliceblue; 
-    width: 700px;
-    max-height: 500px;
+    width: 730px;
+    max-height: 550px;
 }
 
 .twoPokemon{
+    margin-top: 20px;
+    margin-left: 20px;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
-    /* margin-left: 10%; */
     display: flex;
     flex-wrap: wrap;
     width: 700px;
-    height: 500px;
+    height: 550px;
 }
-.enemyContainer{
+.enemyContainerFight{
     padding: 20px;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-.YourContainer{
+.YourContainerFight{
     padding: 20px;
-    width: 300px;   
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    overflow: calc(50% 10px);
 }
 
-.enemyContainer>img, .YourContainer>img{
+.enemyContainerFight>img, .YourContainerFight>img{
     width:180px;
+    /* margin-left: 30px;
+    margin-top: 30px; */
 }
 .att-list{
-    margin-left: 20%;
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -94,4 +104,118 @@ width: 10px;
 }
 .noArrow{
 visibility: hidden;
+}
+
+.enemyBloodContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.enemyBlood{
+    margin-right: 5px;
+    width: 200px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: brown;
+}
+.yourBloodContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.yourBlood{
+    margin-right: 5px;
+    width: 200px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: brown;
+}
+.enemyBloodHelf{
+    margin-right: 5px;
+    width: 200px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: brown;
+    animation-name: decrese;
+    animation-duration: 1s;
+}
+/* @keyframes decrese{
+    100%   { background-image : linear-gradient(to right, green, turquoise, blue, lightblue, purple, red)}
+    50% {background-image: linear-gradient(to right, green, turquoise, blue, lightblue, purple, red)}
+} */
+
+@media only screen and (max-width: 1230px) {
+    .fighting{
+        margin-top: 1%;
+        margin-left: 30%;
+        position: absolute;
+        font-family: "Silkscreen"; 
+        color: aliceblue; 
+        width: 630px;
+        max-height: 460px;
+    }
+    .enemyContainerFight{
+        padding: 15px;
+        /* width: 270px; */
+        font-size: smaller;
+    }
+    .YourContainerFight{
+        padding: 10px;
+        /* width: 270px; */
+        font-size: smaller;
+    }
+
+    .enemyContainerFight>img, .YourContainerFight>img{
+        width:150px;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    .twoPokemon{
+        justify-content: center;
+        align-items: center;
+        margin-top: 0%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        height: 480px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .fighting{  
+        margin: 2%;
+        position: absolute;
+        font-family: "Silkscreen"; 
+        color: aliceblue; 
+        width: 400px;
+        max-height: 300px;
+    }
+    .enemyContainerFight{
+        padding: 10px;
+        width: 80px;
+        font-size: smaller;
+    }
+    .YourContainerFight{
+        padding: 10px;
+        width: 80px;
+        font-size: smaller;
+        display: flex;
+        justify-content: center;
+    }
+
+    .enemyContainerFight>img, .YourContainerFight>img{
+        width:80px;
+        margin-left: 200px;
+        margin-top: 30px;
+    }
+    .att-list{
+        font-size: smaller;
+    }
+    .twoPokemon{
+        display: flex;
+        flex-wrap: wrap;
+        width: 400px;
+        height: 300px;
+    }
+
 }

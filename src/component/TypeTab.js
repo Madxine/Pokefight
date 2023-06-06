@@ -28,13 +28,14 @@ export default function TypeTab (){
 
     return(
         <div className="bg-frame" key={pokemons._id}>
+            <h1>Choose Your Buddy</h1>
         <Tabs  key={pokemons._id}  className="Tabs">
         <TabList className="TabList">
             <Tab>Fire</Tab>
             <Tab>Water</Tab>
             <Tab>Grass</Tab>
             <Tab>Electric</Tab>
-            <Tab>Flying</Tab>
+            <Tab>Ice</Tab>
             <Tab>Rock</Tab>
             <Tab>Bug</Tab>
             <Tab>Fighting</Tab>
@@ -78,7 +79,7 @@ export default function TypeTab (){
         </TabPanel>
         <TabPanel className="TabPanel">
             <span className="type-box-9-icon sprite-type sprite-type-火"></span>
-            {!pokemons.length? <img style={{height:'100px'}} src={pokemov}/> : pokemons.filter((p)=>p.type.substring(0,6) === "^[a-zA-Z]/Flying" && p.legendary !=true).map((p)=>
+            {!pokemons.length? <img style={{height:'100px'}} src={pokemov}/> : pokemons.filter((p)=>p.type.substring(0,3) === "Ice" && p.legendary !=true).map((p)=>
             <div className="pokemoncontainer">
                 <Link to={`/typetab/${p._id}`}><img src={p.url}/>
                 <br/><img className="pokeball" src={pokeball}/> {p.name} <img className="pokeball" src={pokeball}/></Link>

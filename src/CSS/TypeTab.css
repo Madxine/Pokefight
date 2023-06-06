@@ -5,7 +5,7 @@
     position: relative;
     /* max-width: 320px;*/
     /* max-height: 600px;  */
-    /* font-family: "Silkscreen"; */
+    font-family: "Silkscreen";
     /* margin-left: 40%; */
 }
 
@@ -16,6 +16,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+    font-family: "Silkscreen"; 
+    color: aliceblue; 
 }
 
 
@@ -29,8 +32,29 @@ a{
     justify-content: center;
     flex-wrap: wrap;
     background-color: black;
-    max-height: 600px;
+    max-height: 580px;
+    overflow-y: scroll;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+    border: 1px white;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 input::placeholder {
     border: 1px;
@@ -55,3 +79,14 @@ input::placeholder {
     border: solid 1px white;
 }
 
+@media only screen and (max-width: 1230px) {
+    .TabPanel{
+        max-height: 400px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .TabPanel{
+        max-height: 600px;
+    }
+}

@@ -25,7 +25,7 @@ export default function WaittingRoom(){
             <h3>Attack: {onePokemon.attack}</h3>
             <h3>Defence: {onePokemon.defense}</h3>    
         </div>
-        <img src={vs} alt="vs" style={{height:"5rem", position:"absolute", marginTop:"10%"}}/>
+        <img src={vs} alt="vs" className="vs"/>
         <div className="enemyContainer">
             <h1>Your Enemy: {enemyPokemon.name}</h1>
             <img src={enemyPokemon.url}/>

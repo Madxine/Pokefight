@@ -75,3 +75,70 @@ opacity: 0;
     opacity: 1;
     }
 
+    @media only screen and (max-width: 1230px) {
+        .gameboy{
+            position: relative;
+            margin-top: 3%;
+            opacity: 90%;
+            
+            }
+            .gameboy>img{
+                border-radius: 15px;
+                max-height: 500px;
+                }
+                .screen{
+                    position: absolute;
+                    margin-top: 8%;
+                    margin-left: 45%;
+                    margin-bottom: 100%;     
+                }
+                .screen>img{
+                    max-width: 130px;
+                    opacity: 85%;
+                }
+                .button{
+                    width: 39px;
+                    height: 39px;
+                    background-color: aqua;
+                    position: absolute;
+                    margin-top: 25.3%;
+                    margin-left: 18%; 
+                    margin-bottom: 100%;
+                    border-radius: 30px;
+                    border: 0;
+                    background-color: transparent;
+                }
+    }
+    @media only screen and (max-width: 480px) {
+        .gameboy{
+            position: relative;
+            margin-top: 20%;
+            opacity: 90%;
+            }
+            .gameboy>img{
+                border-radius: 15px;
+                /* max-height: 500px; */
+                }
+                .screen{
+                    margin: 20%;
+                    position: absolute;
+                    margin-bottom: 100%;    
+                    padding-left: 55px; 
+                    padding-top: 30px; 
+                }
+                .screen>img{
+                    max-width: 130px;
+                    opacity: 85%;
+                }
+                .button{
+                    background-color: aqua;
+                    position: absolute;
+                    margin-top: 75%;
+                    margin-left: 52%; 
+                    margin-bottom: 100%;
+                    border-radius: 30px;
+                    border: 0;
+                    background-color: transparent;
+                }
+
+    }

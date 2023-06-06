@@ -3,6 +3,7 @@ import fightBG from '../assets/fighting-background.jpg';
 import '../CSS/Fighting.css';
 import { PokeContext } from '../context/PokeContext';
 import arrow from '../assets/arrow (1).png';
+import attBG from '../assets/BOX.png';
 
 
 
@@ -26,7 +27,7 @@ export default function Fighting ({ onePokemon, enemyPokemon  }){
     const handleAttack = ()=>{
         setAttack(true);
         setTimeout(()=> setAttack(false),8000);
-        setTimeout(()=> setHurt(true),8000);
+        
         if (Number(enemyHp)-Number(attackPoint)<=0){
             setEnemyHp(0);
             setWin(true);        
@@ -48,6 +49,10 @@ export default function Fighting ({ onePokemon, enemyPokemon  }){
      };
 
     useEffect(()=>{
+        if(enemyHp != 0 && attack) setTimeout(()=>setHurt(true),8000);
+    },[attack]) 
+
+    useEffect(()=>{
        if(hurt) handleHurt()
     },[enemyHp, hurt]);
 
@@ -58,7 +63,7 @@ export default function Fighting ({ onePokemon, enemyPokemon  }){
     },[win]);
 
     useEffect(()=>{
-        if(lose){setTimeout(()=>alert('You Lose!'), 2000)}
+        if(lose){setTimeout(()=>alert('You Lose!'), 2000); setHurt(false)}
     },[lose]);
 
       console.log(`3.attack? ${attack}`);
@@ -70,25 +75,32 @@ export default function Fighting ({ onePokemon, enemyPokemon  }){
     return( 
         <div className="fighting" key={onePokemon._id} style={{backgroundSize:'cover', backgroundRepeat:'no-repeat', backgroundImage:`url(${fightBG})`}}>
         <div className='twoPokemon'>
-            <div className="enemyContainer">
+            <div className="enemyContainerFight">
             <h3>{enemyPokemon.name}</h3>
-            <h3>HP: {!attack? enemyHp : null}</h3>
+            <div className='enemyBloodContainer'>
+            <div className='enemyBlood'></div>
+            <h5>HP: {!attack? enemyHp : null}</h5>
             </div>
-        <div className="enemyContainer">           
+            </div>
+        <div className="enemyContainerFight">           
             <img className={attack?'enemyPokemon-hurt': (hurt? 'enemyPokemon-att':'enemyContainer>img')} src={enemyPokemon.url}/>
         </div>
-        <div className="YourContainer">          
+        <div className="YourContainerFight">          
             <img  className={attack?'yourpokemon-att': (hurt? 'yourpokemon-hurt':'YourContainer>img')} src={onePokemon.url}/>         
         </div>
-        <div className="YourContainer">
+        <div className="YourContainerFight">
             <h3>{onePokemon.name}</h3>
-            <h3>HP: {!hurt? myHp : null}</h3>
+            <div className='yourBloodContainer'>
+            <div className= 'yourBlood'></div>
+            <h5>HP: {!hurt? myHp : null}</h5>
+            </div>
             <ul className='att-list'>
-                {onePokemon.moves.map((m, index)=><li style={{listStyle:'none'}}>{isHover === index && <img className="arrow" src={arrow}/>} <button disabled={attack || hurt || lose} onClick={()=> handleAttack()} onMouseEnter={()=>setIsHover(index)} onMouseLeave={()=>setIsHover(null)}>{m}</button></li>)}
+                {onePokemon.moves.map((m, index)=><li style={{listStyle:'none'}}>{isHover === index && <img className="arrow" src={arrow}/>} <button disabled={attack || hurt || lose || win} onClick={()=> handleAttack()} onMouseEnter={()=>setIsHover(index)} onMouseLeave={()=>setIsHover(null)}>{m}</button></li>)}
             </ul>
         </div>
         </div>
         <button onClick={()=>setFight(false)}>Give Up</button>
+        <button>Save Game</button>
         </div>
     )
 }
