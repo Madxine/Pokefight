@@ -42,7 +42,7 @@
     visibility: hidden;
 }
 
-@media only screen and (max-width: 1229px) {
+@media only screen and (max-width: 1230px) {
     .waittingContainer{
         margin-top: 3%;
         height: 460px;

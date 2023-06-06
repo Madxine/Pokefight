@@ -145,40 +145,21 @@ visibility: hidden;
 } */
 
 @media only screen and (max-width: 1230px) {
-    .fighting{
-        margin-top: 1%;
-        margin-left: 30%;
-        position: absolute;
-        font-family: "Silkscreen"; 
-        color: aliceblue; 
-        width: 630px;
-        max-height: 460px;
-    }
-    .enemyContainerFight{
-        padding: 15px;
-        /* width: 270px; */
+    .fighting{ 
+        margin: 2%;
+        margin-left: 20%;
+        height: 450px;
         font-size: smaller;
-    }
-    .YourContainerFight{
-        padding: 10px;
-        /* width: 270px; */
-        font-size: smaller;
-    }
-
-    .enemyContainerFight>img, .YourContainerFight>img{
-        width:150px;
-        margin-left: 30px;
-        margin-top: 30px;
-    }
-    .twoPokemon{
-        justify-content: center;
-        align-items: center;
+     }
+     .twoPokemon{
+        margin-left: 10%;
         margin-top: 0%;
-        display: flex;
-        flex-wrap: wrap;
-        width: 600px;
-        height: 480px;
+        height: 450px;
     }
+    .enemyContainerFight>img, .YourContainerFight>img{
+        width:130px;
+    }
+  
 }
 
 @media only screen and (max-width: 900px) {
