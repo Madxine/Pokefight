@@ -1,0 +1,97 @@
+.fighting{
+    margin-top: 5%;
+    margin-left: 30%;
+    position: absolute;
+    font-family: "Silkscreen"; 
+    color: aliceblue; 
+    width: 700px;
+    max-height: 500px;
+}
+
+.twoPokemon{
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    /* margin-left: 10%; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 500px;
+}
+.enemyContainer{
+    padding: 20px;
+    width: 300px;
+}
+.YourContainer{
+    padding: 20px;
+    width: 300px;   
+}
+
+.enemyContainer>img, .YourContainer>img{
+    width:180px;
+}
+.att-list{
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+button{
+    margin-right: 30px;
+    font-family: "Silkscreen";
+    color: aliceblue;
+    background-color: black;
+    border: solid 1px white;
+}
+
+button:disabled{
+    margin-right: 30px;
+    font-family: "Silkscreen";
+    color: rgb(18, 19, 19);
+    background-color: rgb(69, 64, 64);
+    border: solid 1px white;
+}
+.yourpokemon-att{
+    width:180px;
+    animation-name: move;
+    animation-duration: 0.5s;
+    position: relative;
+}
+.yourpokemon-hurt{
+    width:180px;
+    animation: blink 0.5s 2;
+    position: relative;
+}
+
+.enemyPokemon-att{
+    width:180px;
+    animation-name: move2;
+    animation-duration: 0.5s;
+    position: relative;
+}
+.enemyPokemon-hurt{
+    width:180px;
+    animation: blink 0.5s 2;
+    position: relative;
+}
+
+@keyframes blink{
+    to {
+        opacity: 30%;
+    }
+}
+
+@keyframes move{
+    0%   {left:0px; bottom:0px}
+    100% {left:200px; bottom:200px;}
+}
+@keyframes move2{
+    0%   {right:0px; top:0px}
+    100% {right:200px; top:200px;}
+}
+.arrow{
+width: 10px;
+}
+.noArrow{
+visibility: hidden;
+}

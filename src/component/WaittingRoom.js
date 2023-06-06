@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { useParams, useNavigate, NavLink } from "react-router-dom";
 import { PokeContext } from "../context/PokeContext";
 import '../CSS/WaittingRoom.css';
 import vs from '../assets/verses.png';
@@ -11,13 +11,13 @@ export default function WaittingRoom(){
     const Navigate = useNavigate();
     const {pokemons, fight, setFight} = useContext(PokeContext);
     const onePokemon = pokemons.find((p)=> p._id === pokemonId);
-    console.log(onePokemon);
-    const enemyPokemon = pokemons[Math.floor(Math.random()*pokemons.length)];
+    const [enemyPokemon] = useState(()=>pokemons[Math.floor(Math.random()*pokemons.length)])
     
+   
 
     return(
         <div key={onePokemon._id}>
-            <div className="waittingContainer">
+          <div className= {fight? "hideWaittingContainer":"waittingContainer"}>
         <div className="YourContainer" >
             <h1>Your Choice: {onePokemon.name}</h1>
             <img src={onePokemon.url}/>
@@ -34,11 +34,12 @@ export default function WaittingRoom(){
             <h3>Defence: {enemyPokemon.defense}</h3>    
         </div>
         </div>
-        <diiv className="waittingButton">
+        <div className={fight? "hideWaittingButton":"waittingButton"}>
         <button className="goBackButton" onClick={()=>Navigate(-1)}>Go Back</button>
         <button className="goBackButton" onClick={()=>setFight(true)}>Fight</button>
-        </diiv>
-        {fight?<div className="fighting"><Fighting/></div>:null}
         </div>
+        {fight &&<Fighting onePokemon={onePokemon} enemyPokemon={enemyPokemon}/>}
+        </div>
+    
     )
 }

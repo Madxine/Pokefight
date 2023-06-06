@@ -14,7 +14,7 @@ function MainPage() {
     <Route path='/' element={<GameBoy/>}/>
     <Route path='/typetab' element={<TypeTab/>}/>
     <Route path='/typetab/:pokemonId' element={<WaittingRoom/>}/>
-    <Route path='/typetab/:pokemonId/:type' element={<Fighting/>}/>
+    <Route path='/typetab/:/fighting' element={<Fighting/>}/>
     </Routes>
     </div>
   )

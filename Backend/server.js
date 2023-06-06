@@ -6,6 +6,7 @@ require('dotenv').config();
 require('colors');
 const connectDB = require('./dbinit');
 const pokemon = require('./routes/pokemon');
+// const pokedex = require('./data/pokedex.json')
 
 connectDB();
 
@@ -20,6 +21,9 @@ app.use('/pokemons', pokemon);
 app.get('/', (req, res)=>{
 res.send('Welcom to my API')
 });
+// app.get('pokemon',(req, res)=>{
+//     res.json(pokedex)
+// });
 
 app.listen(port, ()=>{
 console.log("server is running on 5K")

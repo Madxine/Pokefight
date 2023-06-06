@@ -7,7 +7,7 @@ const [pokemons, setPokemons] = useState([]);
 const [fight, setFight] = useState(false);
 const [query, setQuery] = useState("");
 const getPokemon = async() => { 
-const res = await fetch(`http://localhost:5000/pokemons`);
+const res = await fetch(`https://pokebackend-oxnq.onrender.com/pokemons`);
 const data = await res.json();
 console.log(data.data);
 setPokemons(data.data);
