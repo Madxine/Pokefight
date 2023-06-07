@@ -49,7 +49,7 @@ export default function Fighting ({ onePokemon, enemyPokemon  }){
      };
 
     useEffect(()=>{
-        if(enemyHp != 0 && attack) setTimeout(()=>setHurt(true),9000);
+        if(enemyHp != 0 && attack) setTimeout(()=>setHurt(true),8000);
     },[attack]) 
 
     useEffect(()=>{
