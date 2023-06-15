@@ -2,8 +2,8 @@
  
 ## Pokemon fighting game
 deploed on Netlify →
-[Visit](https://github.comhttps://marvelous-dodol-a86d1e.netlify.app)
-[1]: http://google.com/ "Google"
+[Visit]https://github.comhttps://marvelous-dodol-a86d1e.netlify.app
+
 
 
 ## backend API for pokefight
