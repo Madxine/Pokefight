@@ -2,7 +2,7 @@
  
 ## Pokemon fighting game
 deploed on Netlify →
-This site was built using [GitHub Pages]([https://pages.github.com/](https://marvelous-dodol-a86d1e.netlify.app))
+Visit https://github.comhttps://marvelous-dodol-a86d1e.netlify.app
 
 
 ## backend API for pokefight
