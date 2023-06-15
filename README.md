@@ -2,7 +2,7 @@
  
 ## Pokemon fighting game
 deploed on Netlify →
-[Visit]https://github.comhttps://marvelous-dodol-a86d1e.netlify.app
+https://github.comhttps://marvelous-dodol-a86d1e.netlify.app
 
 
 
