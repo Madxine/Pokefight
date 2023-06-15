@@ -1,4 +1,4 @@
-# Group Project fron WBS Coding School
+# Group Project from WBS Coding School
  
 ## Pokemon fighting game
 deploed on Netlify →
