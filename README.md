@@ -2,7 +2,7 @@
  
 ## Pokemon fighting game
 deploed on Netlify →
-[Visit](https://marvelous-dodol-a86d1e.netlify.app)
+[Visit](https://maxine-pokemon-fight.netlify.app)
 
 
 
