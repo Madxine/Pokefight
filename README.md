@@ -1,7 +1,7 @@
 # Group Project from WBS Coding School
  
 ## Pokemon fighting game
-deploed on Netlify →
+deployed on Netlify →
 [Visit](https://maxine-pokemon-fight.netlify.app)
 
 
